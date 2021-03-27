@@ -17,7 +17,8 @@ export class ProductComponent implements OnInit {
 
   products:Product[]=[];
   dataLoader = false;
-  constructor(private productService:ProductService, private activatedRoute:ActivatedRoute) { }
+   filterText="";
+   constructor(private productService:ProductService, private activatedRoute:ActivatedRoute) { }
 
   ngOnInit(): void {  
    
@@ -28,9 +29,6 @@ export class ProductComponent implements OnInit {
         this.getProducts()
       }
     })
-      
-      
-      
     
   }
 
